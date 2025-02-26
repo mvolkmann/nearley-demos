@@ -1,0 +1,18 @@
+{
+  "name": "ast-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "nearleyc arithmetic-ast.ne -o arithmetic-ast.js",
+    "clean": "rm arithmetic-ast.js",
+    "dev": "npm run build && npm run start",
+    "start": "bun parser.js",
+    "railroad": "nearley-railroad arithmetic-ast.ne > arithmetic-ast.html",
+    "test": "nearley-test arithmetic-ast.js -i '2 * 3 + (5 + 1) / 2 - 4'",
+    "unparse": "nearley-unparse -d 500 arithmetic-ast.js"
+  },
+  "author": "R. Mark Volkmann",
+  "license": "MIT",
+  "dependencies": {
+    "nearley": "^2.20.1"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "evaluate-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "nearleyc arithmetic-eval.ne -o arithmetic-eval.js",
+    "clean": "rm arithmetic-eval.js",
+    "dev": "npm run build && npm run start",
+    "start": "bun parser.js",
+    "test": "nearley-test arithmetic-eval.js -i '2 * 3 + (5 + 1) / 2 - 4'"
+  },
+  "author": "R. Mark Volkmann",
+  "license": "MIT",
+  "dependencies": {
+    "nearley": "^2.20.1"
+  }
+}

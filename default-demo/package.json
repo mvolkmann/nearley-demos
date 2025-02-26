@@ -1,0 +1,15 @@
+{
+  "name": "evaluate-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "nearleyc arithmetic-default.ne -o arithmetic-default.js",
+    "clean": "rm arithmetic-default.js",
+    "dev": "npm run build && npm run start",
+    "start": "bun parser.js"
+  },
+  "author": "R. Mark Volkmann",
+  "license": "MIT",
+  "dependencies": {
+    "nearley": "^2.20.1"
+  }
+}

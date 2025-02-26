@@ -1,0 +1,16 @@
+{
+  "name": "commentsuate-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "nearleyc arithmetic-comments.ne -o arithmetic-comments.js",
+    "clean": "rm arithmetic-comments.js",
+    "dev": "npm run build && npm run start",
+    "start": "bun parser.js",
+    "test": "nearley-test arithmetic-comments.js -i '# first term\n2 * 3 +\n# middle term\n(5 + 1) / 2 -\n# last term\n4'"
+  },
+  "author": "R. Mark Volkmann",
+  "license": "MIT",
+  "dependencies": {
+    "nearley": "^2.20.1"
+  }
+}
