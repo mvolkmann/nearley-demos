@@ -2,7 +2,7 @@
   "name": "ast-demo",
   "version": "1.0.0",
   "scripts": {
-    "build": "nearleyc arithmetic-ast.ne -o arithmetic-ast.js",
+    "build": "nearleyc arithmetic-ast.ne -o arithmetic-ast.ts",
     "clean": "rm arithmetic-ast.js",
     "dev": "npm run build && npm run start",
     "start": "bun parser.js",

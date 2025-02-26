@@ -9,6 +9,7 @@ function binaryOperation(data) {
 }
 %}
 
+@preprocessor typescript
 @builtin "number.ne" # using decimal rule
 @builtin "whitespace.ne" # using _ rule
 
