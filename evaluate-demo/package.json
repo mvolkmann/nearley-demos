@@ -6,11 +6,15 @@
     "clean": "rm arithmetic-eval.js",
     "dev": "npm run build && npm run start",
     "start": "bun parser.js",
-    "test": "nearley-test arithmetic-eval.js -i '2 * 3 + (5 + 1) / 2 - 4'"
+    "test": "vitest",
+    "testn": "nearley-test arithmetic-eval.js -i '2 * 3 + (5 + 1) / 2 - 4'"
   },
   "author": "R. Mark Volkmann",
   "license": "MIT",
   "dependencies": {
     "nearley": "^2.20.1"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.7"
   }
 }

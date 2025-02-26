@@ -2,8 +2,10 @@
 
 # Recursive technique
 #words
-#  -> word
-#   | word __ words
+#  -> word {% id %}
+#   | word __ words {% d => {
+#       return d.flat(2).filter(word => word !== null);
+#     } %}
 
 # EBNF technique
 words -> word (__ word):* {% d => {
@@ -12,8 +14,8 @@ words -> word (__ word):* {% d => {
 
 # Recursive technique
 #word
-#  -> letter
-#   | letter word
+#  -> letter {% id %}
+#   | letter word {% d => d.join('') %}
 
 # EBNF technique
 word -> letter:+ {% d => d[0].join('') %}
